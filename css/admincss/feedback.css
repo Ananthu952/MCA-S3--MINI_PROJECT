@@ -1,0 +1,125 @@
+
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #4caf50;
+    --primary-dark: #1b5e20;
+    --accent-color: #ffc107;
+    --accent-dark: #ff8f00;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-success {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.btn-success:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.feedback-row {
+    transition: background-color 0.2s ease;
+}
+
+.feedback-row:hover {
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.rating-stars {
+    color: var(--accent-color);
+    font-size: 1.1em;
+}
+
+.rating-1 { color: #dc3545; }
+.rating-2 { color: #fd7e14; }
+.rating-3 { color: var(--accent-color); }
+.rating-4 { color: #20c997; }
+.rating-5 { color: var(--primary-light); }
+
+.feedback-message {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feedback-message.expanded {
+    white-space: normal;
+    overflow: visible;
+}
+
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    border-radius: 12px;
+}
+
+.filter-section {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin-right: 0.75rem;
+}
+
+.reply-indicator {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}

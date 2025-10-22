@@ -1,0 +1,123 @@
+
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #4caf50;
+    --primary-dark: #1b5e20;
+    --accent-color: #ffc107;
+    --accent-dark: #ff8f00;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-success {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.btn-success:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.notification-row {
+    transition: background-color 0.2s ease;
+}
+
+.notification-row:hover {
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.create-notification-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    border-radius: 12px;
+}
+
+.stats-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.target-badge {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+}
+
+.status-badge {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+}
+
+.notification-preview {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.character-count {
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.page-link {
+    color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.page-link:hover {
+    color: var(--primary-dark);
+    background-color: rgba(76, 175, 80, 0.1);
+}

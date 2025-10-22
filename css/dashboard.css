@@ -1,0 +1,348 @@
+:root {
+    --primary-green: #2e7d32;
+    --accent-yellow: #ffc107;
+    --light-bg: #f5f5f5;
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    background: transparent;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.nav-tabs {
+    background: white;
+    border-radius: 15px 15px 0 0;
+    padding: 0;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    justify-content: center;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    padding: 20px 40px;
+    font-weight: 600;
+    color: #666;
+    background: white;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #7b68ee);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-tabs .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-green);
+    background: white;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-green);
+}
+
+.tab-content {
+    background: white;
+    border-radius: 0 0 15px 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    min-height: 500px;
+}
+
+.scrap-request-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.scrap-request-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: var(--primary-green);
+}
+
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #856404;
+}
+
+.status-collected {
+    background-color: rgba(13, 110, 253, 0.2);
+    color: #084298;
+}
+
+.status-earned {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: var(--primary-green);
+}
+
+.status-cancelled {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #721c24;
+}
+
+.tracking-progress {
+    margin: 20px 0;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.progress-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    width: 2px;
+    height: 30px;
+    background: #e9ecef;
+}
+
+.progress-step.completed::after {
+    background: var(--primary-green);
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    z-index: 1;
+    background: white;
+}
+
+.step-icon.completed {
+    background: var(--primary-green);
+    color: white;
+}
+
+.step-icon.pending {
+    background: #e9ecef;
+    color: #666;
+}
+
+#upiForm .form-control {
+  border: 2px solid #c8e6c9;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+#upiForm .form-control:focus {
+  box-shadow: none;
+  border-color: #2e7d32;
+}
+
+#upiForm .btn-success {
+  border-radius: 0 10px 10px 0;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+/* UPI Message */
+#upiMsg {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#upiMsg.success {
+  color: #2e7d32;
+}
+
+#upiMsg.error {
+  color: #c62828;
+}
+
+/* Table Styling */
+.table thead.table-success {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f8e9;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+/* Loading Spinner Center */
+.loading-spinner {
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .payment-stat {
+    margin-bottom: 20px;
+  }
+  #upiForm .form-control {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #upiForm .btn-success {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1b5e20;
+    border-color: #1b5e20;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: var(--accent-yellow);
+    border-color: var(--accent-yellow);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    background: white;
+    color: black;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 50px;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.scrap-details {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    background: #ccc;
+    color: white;
+    margin: 0 auto 5px;
+  }
+  .circle.active {
+    background: #28a745; /* green */
+  }
+  .line {
+    height: 4px;
+    background: #ccc;
+    flex: 1;
+    margin: 0 5px;
+  }
+  .line.active {
+    background: #28a745;
+  }
+  
+.review-stars {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.review-stars .star {
+    color: #ccc; /* default grey */
+    transition: color 0.2s;
+}
+
+.review-stars .star.selected {
+    color: #ffc107; /* yellow when selected */
+}
+
+.review-stars .star.hover {
+    color: #ffdb6e; /* lighter yellow on hover preview */
+}

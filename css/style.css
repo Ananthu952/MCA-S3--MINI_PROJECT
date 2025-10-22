@@ -1,0 +1,315 @@
+/* General Reset & Font */
+* {
+  margin: 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family : 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  padding-bottom: 0;
+}
+
+
+/* Color System */
+:root{
+  --brand-green: #236f27;
+  --brand-green-700: #276a2b;
+  --brand-green-50: #eaf4eb;
+  --brand-yellow: #ffc107;
+  --brand-yellow-700: #e0a800;
+  --brand-line: #e7e7e7;
+  --brand-text: #1f2937;
+  --brand-subtext: #6b7280;
+  --brand-bg: #ffffff;
+}
+
+/* Base */
+body{
+  background: var(--brand-bg);
+  color: var(--brand-text);
+  line-height: 1.55;
+}
+
+/* Links + Focus */
+a{ color: var(--brand-green); }
+a:hover{ color: var(--brand-green-700); }
+:focus-visible{
+  outline: 3px solid rgba(46,125,50,.2);
+  outline-offset: 2px;
+}
+
+/* Navbar */
+header.navbar{
+  border-bottom: 1px solid var(--brand-line);
+}
+.navbar .nav-link{
+  color: var(--brand-text);
+  opacity: .85;
+  transition: color .2s ease, opacity .2s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  color: var(--brand-green);
+  opacity: 1;
+}
+.navbar .btn.btn-outline-danger{
+  border-radius: 10px;
+  border-color: #ef4444;
+  color: #ef4444;
+  padding: 8px 14px;
+}
+.navbar .btn.btn-outline-danger:hover{
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Navbar Logo Hover */
+.logo-icon {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+.logo-icon:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) hue-rotate(5deg);
+}
+
+/* Notification Button */
+.notification-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--brand-green);
+  cursor: pointer;
+}
+.notification-btn .fa-bell {
+  font-size: 27px;
+}
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #FA3E3E;
+  color: black;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+  border: 1px solid #fff;
+}
+
+/* Hero */
+.hero-img-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: zoomPan 15s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Hero Section Spacing */
+section.container.py-5 {
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
+
+/* Primary Actions */
+.btn-warning{
+  background: var(--brand-yellow);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 0 6px 14px rgba(255, 193, 7, .25);
+  transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-warning:hover{
+  background: var(--brand-yellow-700);
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, .3);
+}
+
+/* Secondary Neutral Buttons */
+.btn-neutral{
+  background: #f3f4f6;
+  color: var(--brand-text);
+  border: 1px solid var(--brand-line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.btn-neutral:hover{ background:#e9ecef; }
+
+/* Sections */
+.bg-light{
+  background: #fafafa !important;
+  border-top: 1px solid var(--brand-line);
+  border-bottom: 1px solid var(--brand-line);
+}
+h1,h2,h3,h5{
+  color: var(--brand-text);
+}
+
+/* “Today’s Scrap Prices” Cards */
+.scrap-price-card {
+  border: 1px solid var(--brand-line);
+  border-radius: 14px;
+  padding: 18px;
+  background-color: #fff;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  height: 100%;
+}
+.scrap-price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  border-color: var(--brand-green);
+}
+.scrap-name { font-weight: 700; font-size: 1.05rem; }
+.scrap-price { font-size: .98rem; color: var(--brand-green); }
+
+/* Legacy hover (kept for compatibility) */
+#scrap-prices .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#scrap-prices .card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(33, 150, 83, 0.3);
+  z-index: 1;
+}
+
+/* How It Works Icons + Cards */
+.icon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.icon img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+.icon:hover { transform: scale(1.1); }
+
+.step-card .p-3 {
+  border: 1px solid var(--brand-line);
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color .25s ease;
+}
+.step-card .p-3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  border-color: var(--brand-green);
+}
+
+/* Stars */
+.star { color: #f59e0b; }
+
+/* Status Pills for table (if used elsewhere) */
+.status-pending{ color:#b45309; background:#fff7ed; padding:6px 10px; border-radius:999px; display:inline-block; }
+.status-picked{ color:#065f46; background:#ecfdf5; padding:6px 10px; border-radius:999px; display:inline-block; }
+.status-completed{ color:#1e40af; background:#eff6ff; padding:6px 10px; border-radius:999px; display:inline-block; }
+
+/* Footer */
+footer.bg-success{
+  background: var(--brand-green) !important;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -10px 30px rgba(0,0,0,.06);
+}
+footer .container{
+  gap: 24px;
+}
+footer h4{
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+footer p, footer a{
+  color: #f1fff2 !important;
+  opacity: .95;
+}
+footer a:hover{
+  color: #fff !important;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Cards and Containers (for future AJAX content) */
+.card-clean{
+  background: #fff;
+  border: 1px solid var(--brand-line);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  padding: 20px;
+}
+.card-clean .card-title{ font-weight: 700; }
+.card-clean .card-subtitle{ color: var(--brand-subtext); }
+
+/* Utility Helpers for AJAX-loaded sections */
+.section-wrap{
+  padding: 40px 0;
+  border-bottom: 1px solid var(--brand-line);
+}
+.section-wrap:last-child{ border-bottom: 0; }
+.text-sub{ color: var(--brand-subtext); }
+
+/* Inputs/Selects (if any appear later) */
+.form-control, .form-select{
+  background-color: #fff;
+  border: 1px solid var(--brand-line);
+  color: var(--brand-text);
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: none !important;
+}
+.form-control:focus, .form-select:focus{
+  border-color: var(--brand-green);
+  outline: 3px solid rgba(46,125,50,0.15);
+  outline-offset: 2px;
+}
+
+/* Subtle separators for content blocks */
+.hr-soft{
+  margin: 24px 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--brand-line), transparent);
+}
+
+/* Animations */
+@keyframes zoomPan {
+  0% { transform: scale(1) translate(0, 0); }
+  25% { transform: scale(1.03) translate(5px, -5px); }
+  50% { transform: scale(1.05) translate(-5px, 5px); }
+  75% { transform: scale(1.03) translate(5px, 5px); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+.hero-image-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: transform, opacity;
+}
+.hero-image-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: zoomPan 15s ease-in-out infinite;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px){
+  section.container.py-5{
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+}
+@media (max-width: 575px){
+  .logo-icon{ width: 120px; }
+  .navbar .btn.btn-outline-danger{ padding: 7px 12px; }
+}
+
+/* Keep existing selectors from your original file above for compatibility */

@@ -1,0 +1,102 @@
+:root {
+            --primary-color: #2e7d32;
+            --primary-light: #4caf50;
+            --primary-dark: #1b5e20;
+            --accent-color: #ffc107;
+            --accent-dark: #ff8f00;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .btn-success {
+            background-color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+
+        .btn-success:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-warning {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-warning:hover {
+            background-color: var(--accent-dark);
+            border-color: var(--accent-dark);
+            color: #000;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+        }
+
+        .badge.bg-success {
+            background-color: var(--primary-light) !important;
+        }
+
+        .page-link {
+            color: var(--primary-color);
+        }
+
+        .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .page-link:hover {
+            color: var(--primary-dark);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+
+        .slide-down {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .collector-row {
+            transition: background-color 0.2s ease;
+        }
+
+        .collector-row:hover {
+            background-color: rgba(76, 175, 80, 0.05);
+        }

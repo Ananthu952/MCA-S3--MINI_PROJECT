@@ -1,0 +1,129 @@
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #4caf50;
+            --primary-dark: #1b5e20;
+            --accent-color: #ffc107;
+            --accent-dark: #ff8f00;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .btn-success {
+            background-color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+
+        .btn-success:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+        }
+
+        .payment-row {
+            transition: background-color 0.2s ease;
+        }
+
+        .payment-row:hover {
+            background-color: rgba(76, 175, 80, 0.05);
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            border-radius: 12px;
+        }
+
+        .filter-section {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            margin-right: 0.75rem;
+        }
+
+        .amount-display {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .page-link {
+            color: var(--primary-color);
+        }
+
+        .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .page-link:hover {
+            color: var(--primary-dark);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+
+        .bulk-actions {
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .payment-details {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .status-pending {
+            background-color: #fff3cd !important;
+            color: #856404 !important;
+        }
+
+        .status-paid {
+            background-color: #d1edff !important;
+            color: #0c63e4 !important;
+        }
+
+        .status-processing {
+            background-color: #e2e3e5 !important;
+            color: #41464b !important;
+        }
